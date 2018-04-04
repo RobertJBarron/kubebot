@@ -143,8 +143,9 @@ func kubectl(command *bot.Cmd) (msg string, err error) {
 	}
 
 	if !kb.channels[command.Channel] {
-		fmt.Printf(forbiddenChannelMessage, time, command.Channel, nickname)
-		return fmt.Sprintf(forbiddenChannelResponse, nickname), nil
+		//fmt.Printf(forbiddenChannelMessage, time, command.Channel, nickname)
+		//return fmt.Sprintf(forbiddenChannelResponse, nickname), nil
+		return "",nil
 	}
 
 	if len(command.Args) > 0 && !kb.commands[command.Args[0]] {
